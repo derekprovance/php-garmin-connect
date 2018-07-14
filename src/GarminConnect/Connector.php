@@ -15,7 +15,7 @@
  * @package
  */
 
-namespace dawguk\GarminConnect;
+namespace GarminConnect;
 
 class Connector
 {

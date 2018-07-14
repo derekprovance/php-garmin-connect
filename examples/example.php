@@ -2,12 +2,12 @@
 require_once __DIR__ . '/../vendor/autoload.php';
 
 $arrCredentials = array(
-   'username' => 'xxx',
-   'password' => 'xxx'
+   'username' => 'changeme',
+   'password' => 'changeme'
 );
 
 try {
-   $objGarminConnect = new \dawguk\GarminConnect($arrCredentials);
+   $objGarminConnect = new \garmin\GarminConnect($arrCredentials);
 
    $objResults = $objGarminConnect->getActivityList(0, 1);
    print_r($objResults);

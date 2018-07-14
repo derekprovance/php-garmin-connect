@@ -30,7 +30,7 @@ $arrCredentials = array(
 );
 
 try {
-   $objGarminConnect = new \dawguk\GarminConnect($arrCredentials);
+   $objGarminConnect = new \GarminConnect($arrCredentials);
 
    $objResults = $objGarminConnect->getActivityList(0, 1);
    foreach($objResults->results->activities as $objActivity) {
@@ -64,7 +64,7 @@ Returns a stdClass object, which contains an array called dictionary, that conta
 
 ```php
 try {
-   $objGarminConnect = new \dawguk\GarminConnect($arrCredentials);
+   $objGarminConnect = new \GarminConnect($arrCredentials);
    $obj_results = $objGarminConnect->getActivityTypes();
    foreach ($obj_results->dictionary as $item) {
       print_r($item);
@@ -94,7 +94,7 @@ try {
         )
 
     )
- 
+
 ### getActivityList(integer $intStart, integer $intLimit)
 
 Returns a stdClass object, which contains an array called results, that contains stdClass objects that represents an activity. It accepts two parameters - start and limit; start is the record that you wish to start from, and limit is the number of records that you would like returned.
@@ -103,7 +103,7 @@ Returns a stdClass object, which contains an array called results, that contains
 
 ```php
    try {
-      $objGarminConnect = new \dawguk\GarminConnect($arrCredentials);
+      $objGarminConnect = new \GarminConnect($arrCredentials);
       $obj_results = $objGarminConnect->getActivityList(0, 1);
       print_r($obj_results);
    } catch (Exception $objException) {
@@ -131,12 +131,12 @@ Returns a stdClass object, which contains an array called results, that contains
 
                                     [activityDescription] => stdClass Object
                                         (
-                                            [value] => 
+                                            [value] =>
                                         )
 
                                     [locationName] => stdClass Object
                                         (
-                                            [value] => 
+                                            [value] =>
                                         )
 
                                     [userId] => 1653429
@@ -175,7 +175,7 @@ Returns a stdClass object, that contains a stdClass object called activity, whic
 
 ```php
 try {
-   $objGarminConnect = new \dawguk\GarminConnect($arrCredentials);
+   $objGarminConnect = new \GarminConnect($arrCredentials);
    $obj_results = $objGarminConnect->getActivitySummary(593520370);
    print_r($obj_results);
 } catch (Exception $objException) {
@@ -205,7 +205,7 @@ Note: This method may take a while to return any data, as it can be vast.
 
 ```php
 try {
-   $objGarminConnect = new \dawguk\GarminConnect($arrCredentials);
+   $objGarminConnect = new \GarminConnect($arrCredentials);
    $obj_results = $objGarminConnect->getActivityDetails(593520370);
    print_r($obj_results);
 } catch (Exception $objException) {
@@ -223,16 +223,16 @@ Returns a string representation of requested data type, for the given activity I
 
 |Type | Returns |
 |---- | ------- |
-|\dawguk\GarminConnect::DATA_TYPE_GPX | GPX as XML string |
-|\dawguk\GarminConnect::DATA_TYPE_TCX | TCX as XML string |
-|\dawguk\GarminConnect::DATA_TYPE_GOOGLE_EARTH | Google Earth as XML string |
+|\GarminConnect::DATA_TYPE_GPX | GPX as XML string |
+|\GarminConnect::DATA_TYPE_TCX | TCX as XML string |
+|\GarminConnect::DATA_TYPE_GOOGLE_EARTH | Google Earth as XML string |
 
 #### Example
 
 ```php
    try {
-      $objGarminConnect = new \dawguk\GarminConnect($arrCredentials);
-      $obj_results = $objGarminConnect->getDataFile(\dawguk\GarminConnect::DATA_TYPE_GPX, 593520370);
+      $objGarminConnect = new \GarminConnect($arrCredentials);
+      $obj_results = $objGarminConnect->getDataFile(\GarminConnect::DATA_TYPE_GPX, 593520370);
       print_r($obj_results);
    } catch (Exception $objException) {
       echo "Oops: " . $objException->getMessage();
@@ -261,4 +261,3 @@ Returns a string representation of requested data type, for the given activity I
                       <gpxtpx:cad>0</gpxtpx:cad>
                    </gpxtpx:TrackPointExtension>
                 </extensions>
-

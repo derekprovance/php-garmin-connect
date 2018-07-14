@@ -1,6 +1,6 @@
 <?php
 /**
- * RedirectException.php
+ * AuthenticationException.php
  *
  * LICENSE: THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
@@ -15,9 +15,9 @@
  * @package
  */
 
-namespace dawguk\GarminConnect\exceptions;
+namespace garmin\GarminConnect\exceptions;
 
-class RedirectException extends \Exception
+class AuthenticationException extends \Exception
 {
 
 }

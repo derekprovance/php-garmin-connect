@@ -15,11 +15,11 @@
  * @package
  */
 
-namespace dawguk;
+namespace garmin;
 
-use dawguk\GarminConnect\Connector;
-use dawguk\GarminConnect\exceptions\AuthenticationException;
-use dawguk\GarminConnect\exceptions\UnexpectedResponseCodeException;
+use GarminConnect\Connector;
+use GarminConnect\exceptions\AuthenticationException;
+use GarminConnect\exceptions\UnexpectedResponseCodeException;
 
 class GarminConnect
 {
